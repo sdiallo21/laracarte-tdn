@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactMessageCreated;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,16 @@ Route::get('/contact',[
 	'as' => 'contact_path',
 	'uses' => 'ContactController@create'
 ]);
+
+
+Route::post('/contact',[
+	'as' => 'contact_path',
+	'uses' => 'ContactController@store'
+]);
+
+Route::get('/test-email', function(){
+	return new ContactMessageCreated('Souleymane Diallo', 'collamonlib@gmail.com', 'Bonjour, je suis ravi de faire des cours avec vous');
+});
 
 
 

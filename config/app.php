@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laracarte'),
 
     /*
     |--------------------------------------------------------------------------
@@ -150,6 +150,8 @@ return [
         /*
          * Package Service Providers...
          */
+
+        MercurySeries\Flashy\FlashyServiceProvider::class,
 
         /*
          * Application Service Providers...
